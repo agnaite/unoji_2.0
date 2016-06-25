@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Menlo', sans-serif;
+}

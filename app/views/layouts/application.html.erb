@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unoji</title>
+  <title>unoji</title>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet", type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+    <div class="nav-title"><%= link_to 'UNOJI', '/' %></div>
+    <div class="nav-links">
+      <div class="nav-link"><%= link_to 'Search by tag', tags_path %></div>
+      <div class="nav-link"><%= link_to 'Add unoji', new_emoji_path %></div>
+    </div>
+</nav>
 
 <%= yield %>
 
