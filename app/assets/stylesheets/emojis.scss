@@ -1,0 +1,38 @@
+// Place all the styles related to the emojis controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$cloud-gray: #ecf0f1;
+$lime: #BADA55;
+$sunflower-yellow: #f1f105;
+
+.container {
+  .unoji_group {
+    margin: 60px auto;
+    width: 75%;
+    // border: 1px solid red;
+    padding-left: 60px;
+
+    .unoji {
+      cursor: pointer;
+      padding: 40px 0px;
+      margin: 5px;
+      text-align: center;
+      border-radius: 5px;
+      background-color: $cloud-gray;
+      font-size: 16px;
+
+      &:hover {
+        background-color: $sunflower-yellow;
+        color: white;
+      }
+      span {
+        &::selection {
+          background: transparent; /* WebKit/Blink Browsers */
+        }
+        &::-moz-selection {
+          background: transparent; /* Gecko Browsers */
+        }
+      }
+    }
+  }
+}
