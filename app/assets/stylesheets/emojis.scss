@@ -11,8 +11,23 @@ $sunflower-yellow: #f1f105;
     width: 75%;
     // border: 1px solid red;
     padding-left: 60px;
-
+    #popup {
+      display: none;
+      z-index: 1000;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: $sunflower-yellow;
+      padding: 50px 150px;
+      font-size: 40px;
+      text-align: center;
+      color: white;
+    }
     .unoji {
+      z-index: 100;
       cursor: pointer;
       padding: 40px 0px;
       margin: 5px;

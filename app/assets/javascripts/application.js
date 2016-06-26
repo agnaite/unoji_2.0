@@ -17,4 +17,9 @@
 
 $(document).ready(function(){
   new Clipboard('.unoji');
+
+  $('.unoji').click(function(){
+    $("#popup").show().delay(500).fadeOut();
+  });
+
 });
