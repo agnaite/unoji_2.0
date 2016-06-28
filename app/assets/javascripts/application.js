@@ -20,6 +20,7 @@ $(document).ready(function(){
 
   $('.unoji').click(function(){
     $("#popup").show().delay(500).fadeOut();
+    
   });
 
 });

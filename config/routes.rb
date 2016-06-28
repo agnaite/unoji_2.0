@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   resources :emojis
   resources :tags
+
+  get 'click' => 'emojis#click'
 end
