@@ -11,6 +11,7 @@ $sunflower-yellow: #f1f105;
     width: 75%;
     // border: 1px solid red;
     padding-left: 60px;
+
     #popup {
       display: none;
       z-index: 1000;
@@ -20,8 +21,8 @@ $sunflower-yellow: #f1f105;
       top: 40%;
       margin-left: auto;
       margin-right: auto;
-      background-color: $sunflower-yellow;
-      padding: 50px 150px;
+      background-color: rgba(241,241,5, 0.7);
+      padding: 60px;
       font-size: 40px;
       text-align: center;
       color: white;
@@ -35,18 +36,18 @@ $sunflower-yellow: #f1f105;
       border-radius: 5px;
       background-color: $cloud-gray;
       font-size: 16px;
+      text-decoration: none;
+      color: black;
 
       &:hover {
         background-color: $sunflower-yellow;
         color: white;
       }
-      span {
-        &::selection {
-          background: transparent; /* WebKit/Blink Browsers */
-        }
-        &::-moz-selection {
-          background: transparent; /* Gecko Browsers */
-        }
+      &::selection {
+        background: transparent; /* WebKit/Blink Browsers */
+      }
+      &::-moz-selection {
+        background: transparent; /* Gecko Browsers */
       }
     }
   }
