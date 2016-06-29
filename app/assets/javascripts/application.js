@@ -13,14 +13,60 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.validate.additional-methods
+//= require jquery.validate
 //= require_tree .
 
-$(document).ready(function(){
-  new Clipboard('.unoji');
+$(function() {
+  $(document).ready(function(){
+    new Clipboard('.unoji');
 
-  $('.unoji').click(function(){
-    $("#popup").show().delay(500).fadeOut();
-    
+    $('.unoji-form').validate();
+
+    $('.unoji').click(function(){
+      $("#popup").show().delay(500).fadeOut();
+    });
+
+    $('.add-unoji').click(function(){
+      $("#create_unoji").toggle();
+    });
+
+    $('.cancel-btn').click(function() {
+      $("#create_unoji").hide();
+    });
+    initPage();
+});
+
+  $(window).bind('page:change', function() {
+    initPage();
   });
 
+  function initPage() {
+    $(document).ready(function(){
+
+      new Clipboard('.unoji');
+
+      $('.unoji-form').validate();
+
+      $('.unoji').click(function(){
+        $("#popup").show().delay(500).fadeOut();
+      });
+
+      $('.add-unoji').click(function(){
+        $("#create_unoji").toggle();
+      });
+
+      $('.cancel-btn').click(function() {
+        $("#create_unoji").hide();
+      });
+
+      // $('#overlay').click(function(e){
+      //   var target = $(e.target);
+      //   console.log(target);
+      //   if ($('#create_unoji').is(":visible") && target.hasClass($('form-horizontal'))) {
+      //     $("#create_unoji").hide();
+      //   }
+      // });
+    });
+  }
 });

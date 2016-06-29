@@ -1,15 +1,40 @@
 // Place all the styles related to the emojis controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 $cloud-gray: #ecf0f1;
 $lime: #BADA55;
 $sunflower-yellow: #f1f105;
+$bright-blue: #3498db;
+$red: #e74c3c;
+$green: #2ecc71;
 
+.flash {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    color: $red;
+    text-align: center;
+    border: 2px solid $red;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+}
 .container {
+  padding-bottom: 100px;
   .unoji_group {
-    margin: 60px auto;
+    margin: 80px auto;
     width: 75%;
-    // border: 1px solid red;
     padding-left: 60px;
 
     #popup {
@@ -48,6 +73,105 @@ $sunflower-yellow: #f1f105;
       }
       &::-moz-selection {
         background: transparent; /* Gecko Browsers */
+      }
+    }
+  }
+
+  #create_unoji {
+    display: none;
+    form {
+      position: absolute;
+      z-index: 900;
+      left: 0;
+      right: 0;
+      top: 25%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 3px solid $bright-blue;
+      padding: 60px;
+      font-size: 20px;
+      text-align: center;
+      width: 70%;
+      border-radius: 20px;
+
+      label#emoji_face-error.error,
+      label#emoji_tag_list-error.error {
+        color: $red;
+        font-size: 12px;
+        padding: 5px 0 0 0;
+        // border: 1px solid green;
+        display: block;
+        margin-left: 268px;
+        width: 20%;
+      }
+
+      label#emoji_face-error.error {
+        width: 20%;
+      }
+      label#emoji_tag_list-error.error {
+
+      }
+
+      .form-face {
+        label {
+          font-family: 'Ubuntu', sans-serif;
+          color: $bright-blue;
+          font-weight: 400;
+          padding-top: 30px;
+        }
+        .form-control {
+          border: 4px solid $cloud-gray;
+          width: 20%;
+          height: 80px;
+          text-align: center;
+          font-size: 28px;
+          border-radius: 5px;
+        }
+      }
+      .form-tags {
+        label {
+          color: $bright-blue;
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: 400;
+        }
+        .form-control {
+          padding-left: 8px;
+          border: 4px solid $cloud-gray;
+          width: 50%;
+          height: 40px;
+          border-radius: 5px;
+        }
+      }
+      .form-btn {
+        margin-left: 17px;
+      }
+      .form-btn input,
+      .cancel-btn {
+        font-size: 16px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-top: 20px;
+        width: 20%;
+        height: 40px;
+        background-color: white;
+        border: 2px solid $green;
+        border-radius: 5px;
+        color: $green;
+
+        &:hover {
+          background-color: $green;
+          color: white;
+          text-decoration: none;
+        }
+      }
+      .cancel-btn {
+        border-color: $red;
+        color: $red;
+        &:hover {
+          background-color: $red;
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }

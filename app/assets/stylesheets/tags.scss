@@ -1,3 +1,31 @@
 // Place all the styles related to the tags controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$cloud-gray: #ecf0f1;
+$lime: #BADA55;
+$sunflower-yellow: #f1f105;
+$bright-blue: #3498db;
+$red: #e74c3c;
+$green: #2ecc71;
+
+.tags_group {
+  width: 60%;
+  display: block;
+  margin: 100px auto;
+  // border: 1px solid red;
+  text-align: center;
+  .tags {
+    line-height: 3;
+    font-size: 16px;
+    color: $lime;
+    border: 2px solid $lime;
+    padding: 10px;
+    border-radius: 5px;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+      background-color: $sunflower-yellow;
+    }
+  }
+}

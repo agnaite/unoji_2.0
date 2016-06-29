@@ -10,15 +10,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
+  <nav>
     <div class="nav-title"><%= link_to 'UNOJI', '/' %></div>
     <div class="nav-links">
-      <div class="nav-link"><%= link_to 'Search by tag', tags_path %></div>
-      <div class="nav-link"><%= link_to 'Add unoji', new_emoji_path %></div>
+      <div class="nav-link"><%= link_to 'Categories', tags_path %></div>
+      <div class="nav-link"><a class='add-unoji'>Add unoji</a></div>
     </div>
-</nav>
-
-<%= yield %>
-
+  </nav>
+  <% if flash[:notice] -%>
+    <p class="flash"><%= flash.notice %></p>
+  <% end %>
+  <div id='overlay'>
+    <%= yield %>
+  </div>
 </body>
 </html>
