@@ -1,9 +1,9 @@
 <div class="container">
   <%= render :partial => 'layouts/form' %>
   <div class="unoji_group">
-    <% count = 0 %>
-    <div id='popup'>Copied!</div>
-    <% @emojis.each do |emoji| %>
+    <% @tag.emojis.each do |emoji| %>
+      <% count = 0 %>
+      <div id='popup'>Copied!</div>
       <%= link_to emoji.face, {:controller => "emojis", :action => "click", :unoji => emoji.id }, remote: true, class: "unoji col-md-2 col-sm-4 col-xs-4 face_#{count}", :"data-clipboard-target" => :".face_#{count}" %>
       <% count += 1 %>
     <% end %>

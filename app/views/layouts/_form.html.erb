@@ -1,0 +1,21 @@
+<div id='create_unoji'>
+  <%= form_for @emoji, :html => {:class => 'form-horizontal unoji-form'} do |f| %>
+    <ul class="form_errors">
+      <% @emoji.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+    <p class='form-face form-group'>
+      <%= f.label :face, 'Unoji: ', class: 'col-sm-4 control-label' %>
+      <%= f.text_field :face, class: 'form-control', required: true, maxlength: 8 %>
+    </p>
+    <p class='form-tags form-group'>
+      <%= f.label :tag_list, 'Categories: ', class: 'col-sm-4 control-label' %>
+      <%= f.text_field :tag_list, class: 'form-control', required: true %>
+    </p>
+    <p class='form-btn'>
+      <%= f.submit "Submit", :class => 'submit_btn' %>
+      <button type="button" formonvalidate class="cancel-btn cancel">Cancel</button>
+    </p>
+  <% end %>
+</div>

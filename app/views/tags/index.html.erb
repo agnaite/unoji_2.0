@@ -1,1 +1,8 @@
-<%= @tags.first.category %>
+<div class="container">
+  <%= render :partial => 'layouts/form' %>
+  <div class="tags_group">
+    <% @tags.each do |tag| %>
+      <%= link_to tag.category, tag_path(tag), class: 'tags' %>
+    <% end %>
+  </div>
+</div>
