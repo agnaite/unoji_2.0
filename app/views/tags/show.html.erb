@@ -1,6 +1,7 @@
 <div class="container">
   <%= render :partial => 'layouts/form' %>
   <div class="unoji_group">
+    <span class="category-name"><%= @tag.category %> unojis</span>
     <% @tag.emojis.each do |emoji| %>
       <% count = 0 %>
       <div id='popup'>Copied!</div>
