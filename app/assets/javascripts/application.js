@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 //= require turbolinks
 //= require jquery.validate.additional-methods
 //= require jquery.validate
@@ -27,6 +29,10 @@ $(function() {
       $("#popup").show().delay(500).fadeOut();
     });
 
+    $( ".auto-tags" ).autocomplete({
+      source: '<%= autocomplete_tag_category_emojis_path(:json) %>',
+    });
+
     $('.add-unoji').click(function(){
       $("#create_unoji").toggle();
     });
@@ -34,6 +40,7 @@ $(function() {
     $('.cancel-btn').click(function() {
       $("#create_unoji").hide();
     });
+
     initPage();
 });
 
@@ -47,6 +54,10 @@ $(function() {
       new Clipboard('.unoji');
 
       $('.unoji-form').validate();
+
+      $( ".auto-tags" ).autocomplete({
+        source: '<%= autocomplete_tag_category_emojis_path(:json) %>',
+      });
 
       $('.unoji').click(function(){
         $("#popup").show().delay(500).fadeOut();

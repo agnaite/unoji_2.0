@@ -2,7 +2,6 @@ class Emoji < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   validates :face, uniqueness: true
-  # validates :tag_list, presence: true
 
   def increment_copy_count
     self.copy_count += 1

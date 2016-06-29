@@ -35,15 +35,26 @@ $green: #2ecc71;
   .unoji_group {
     margin: 80px auto;
     width: 75%;
-    padding-left: 60px;
+    padding-left: 70px;
+
+    .category-name {
+      text-align: center;
+      color: $bright-blue;
+      margin: -30px 70px 30px 0;
+      display: block;
+      margin-left: -70px;
+      padding-left: 70px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 30px;
+    }
 
     #popup {
       display: none;
       z-index: 1000;
-      position: absolute;
+      position: fixed;
       left: 0;
       right: 0;
-      top: 40%;
+      top: 30%;
       margin-left: auto;
       margin-right: auto;
       background-color: rgba(241,241,5, 0.7);
@@ -80,7 +91,7 @@ $green: #2ecc71;
   #create_unoji {
     display: none;
     form {
-      position: absolute;
+      position: fixed;
       z-index: 900;
       left: 0;
       right: 0;

@@ -1,6 +1,8 @@
 class EmojisController < ApplicationController
   include EmojisHelper
 
+  autocomplete :tag, :category
+
   def index
     @emojis = Emoji.all.order(copy_count: :desc)
     @emoji = Emoji.new
