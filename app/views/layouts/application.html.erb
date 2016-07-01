@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>unoji</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet", type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -13,8 +14,8 @@
   <nav>
     <div class="nav-title"><%= link_to 'UNOJI', '/' %></div>
     <div class="nav-links">
-      <div class="nav-link"><%= link_to 'Categories', tags_path %></div>
-      <div class="nav-link"><a class='add-unoji'>Add unoji</a></div>
+      <div class="nav-link-cat nav-link"><%= link_to 'Categories', tags_path %></div>
+      <div class="nav-link-add nav-link"><a class='add-unoji'>Add unoji</a></div>
     </div>
   </nav>
   <% if flash[:notice] -%>
