@@ -15,7 +15,6 @@
 //= require jquery-ui
 //= require autocomplete-rails
 //= require turbolinks
-//= require jquery.validate.additional-methods
 //= require jquery.validate
 //= require_tree .
 
@@ -70,14 +69,7 @@ $(function() {
       $('.cancel-btn').click(function() {
         $("#create_unoji").hide();
       });
-      
-      // $('#overlay').click(function(e){
-      //   var target = $(e.target);
-      //   console.log(target);
-      //   if ($('#create_unoji').is(":visible") && target.hasClass($('form-horizontal'))) {
-      //     $("#create_unoji").hide();
-      //   }
-      // });
+
     });
   }
 });
