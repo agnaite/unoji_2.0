@@ -70,7 +70,7 @@ $(function() {
       $('.cancel-btn').click(function() {
         $("#create_unoji").hide();
       });
-
+      
       // $('#overlay').click(function(e){
       //   var target = $(e.target);
       //   console.log(target);
