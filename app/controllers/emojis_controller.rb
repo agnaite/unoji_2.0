@@ -6,6 +6,11 @@ class EmojisController < ApplicationController
   def index
     @emojis = Emoji.all.order(copy_count: :desc)
     @emoji = Emoji.new
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def click
